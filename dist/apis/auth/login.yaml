@@ -1,0 +1,29 @@
+post:
+  tags:
+    - Auth
+  summary: Login
+  description: This is used for login.
+  operationId: login
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              type: string
+            password:
+              type: string
+    required: true
+  responses:
+    "200":
+      description: successful login
+      content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: 
+                    type: boolean
+    "400":
+      description: Invalid username/password supplied

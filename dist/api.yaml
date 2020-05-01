@@ -1,0 +1,24 @@
+openapi: 3.0.0
+servers:
+  - description: Api for Book management app
+    url: https://github.com/duysmile/learn-express
+info:
+  description: APIs for Book management app
+  version: "1.0.0"
+  title: APIs document
+  contact:
+    email: duy210697@gmail.com
+tags:
+  - name: Auth
+    description: Operations about authentication
+  - name: Transaction
+    description: Operations about transaction
+  - name: Book
+    description: Operations about book
+  - name: User
+    description: Operations about user
+paths:
+  /api/auth/login:
+    $ref: /apis/auth/login.yaml
+  /api/books/:
+    $ref: /apis/books/list.yaml
